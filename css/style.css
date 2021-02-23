@@ -1,4 +1,4 @@
-/*fonts*/
+/* fonts
 
 @font-face {
     font-family: Cuprum;
@@ -43,6 +43,8 @@
     font-weight: 700;
     font-style: normal;
 }
+*/
+
 
 /* Variables */
 
@@ -51,12 +53,14 @@
     --basic-black: #000000;
     --basic-dark-gray: #A9A9A9;
     --basic-silver: #C5C5C5;
+    --basic-dark-silver: #B5B5B5;
     --basic-light: #F3F7F9;
     --basic-white-smoke: #F1F5F7;
     --basic-dark: #293449;
     --basic-midnight-blue: #32425C;
     --basic-neutral-one: #F9F5F0;
     --basic-neutral-two: #F7F3EC;
+    --basic-neutral-three: #F4F4F4;
     --basic-neutral-smoke: #F1F1F1;
     --basic-red: #EE3643;
     --basic-forest-green: #63A63E;
@@ -71,6 +75,8 @@
     --special-green: #5FBB2D;
     --special-dark-green: #518534;
     --special-extra-dark: #161D29;
+    --special-black: #444444;
+    
 }
 
 /* Global */
@@ -80,7 +86,7 @@ html {
 }
 
 .page-body {
-    min-width: 940px;
+    min-width: 960px;
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -91,7 +97,6 @@ html {
     text-transform: none;
     background-color: var(--basic-white);
     background-image: none;
-    
 }
 
 a {
@@ -109,27 +114,22 @@ img {
     color: var(--basic-white);
     background-color: var(--basic-dark);
     height: 42px;
-    display: flex;
-    flex: 1 0;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
 /* main-header__logo*/
 
-.main-header__logo img {
+.main-header__logo {
     background-color: var(--basic-red);
-    padding: 12px 56px 17px 56px;
+    max-width: 220px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
-.main-header__logo img:active {
+.main-header__logo:active {
     background-color: var(--special-maroon);
-}
-
-.main-header__search {
-    display: flex;
 }
 
 .header-top-container a {
@@ -143,6 +143,15 @@ img {
 }
 
 /* main-header__search */
+
+.main-header__search {
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 260px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+}
 
 .main-header__search input {
     background-color: var(--basic-dark);
@@ -164,6 +173,15 @@ img {
 
 /* main-header__bookmark */
 
+.main-header__bookmark {
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 150px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+}
+
 .main-header__bookmark:hover>.icons {
     opacity: 100%;
 }
@@ -180,6 +198,19 @@ img {
 }
 
 /* main-header__cart */
+
+.main-header__cart {
+    max-width: 136px;
+    height: 42px;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-page .main-header__cart  {
+    background-color: var(--basic-red);
+}
 
 .main-header__cart:hover>.icons {
     opacity: 100%;
@@ -257,7 +288,7 @@ img {
     text-align: center;
 }    
 
-.registration-form {
+.login-block {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -301,6 +332,55 @@ img {
 }
 
 .register-link a:focus {
+    color: var(--basic-silver);
+}
+
+.user-name {
+    width: 299px;
+    height: 45px;
+    text-align: center;
+    background: url(../img/icons/icon-user.png) 15px center no-repeat, url(../img/icons/icon-logout.png) 262px center no-repeat;
+    background-color: var(--basic-white);
+}
+
+.user-name a {
+    color: var(--basic-black);
+    font-size: 21px;
+    font-weight: 21px;
+}
+
+/* Как поменять цвет фоновой картинки?
+.user-name:hover { 
+    background: url(../img/icons/icon-user.png) 15px center no-repeat #3D546F, url(../img/icons/icon-logout.png) 262px center no-repeat #3D546F;
+} */
+
+.user-name a:active {
+    color: var(--basic-silver);
+}
+
+.personal-area {
+    width: 210px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-orders,
+.account {
+    color: var(--basic-midnight-blue);
+    font-size: 16px;
+    font-weight: 18px; 
+}
+
+.my-orders:hover,
+.account:hover {
+    color: var(--basic-red);
+}
+
+.my-orders:active,
+.account:active {
     color: var(--basic-silver);
 }
 
@@ -398,6 +478,15 @@ img {
     opacity: 0.3;
 }
 
+/* slider */
+
+.slider-wrapper {
+    min-width: 620px;
+    min-height: 266px;
+    background-image: url("../img/slider_item_1.jpg");
+    background-repeat: no-repeat;
+}
+
 /* button */
 
 .button {
@@ -463,12 +552,20 @@ img {
     text-align: center;
 }
 
+
 .new-price a {
     font-family: "PT Sans";
     font-size: 17px;
     line-height: 18px;
     font-weight: 700;
+    width: 141px;
+    height: 38px;
     color: var(--basic-white);
+    text-align: center;
+    vertical-align: middle;
+    background-image: url(../img/icons/red-button.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 /* main-sellers-top */
@@ -701,4 +798,197 @@ img {
     color: var(--special-wine-red);
     text-decoration: none;
 }
+
+/* Modal */
+
+.modal {
+    color: var(--basic-black);
+}
+
+.modal-feedback-top {
+    background-color: var(--basic-white);
+}
+
+.modal-feedback-bottom {
+    background-color: var(--basic-neutral-three);
+
+}
+.modal-feedback {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+/* modal-feedback */
+
+.form-feedback input[type="text"], 
+.feedback-messege {
+    color: var(--basic-dark-gray);
+    font-family: PT Sans;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+    border: 2px solid #C5C5C5;
+}
+
+.feedback-messege {
+    color: var(--basic-dark-gray);
+}
+
+.feedback-messege:active {
+    color: var(--basic-black);
+}
+
+.modal-close-button {
+    width: 21px;
+    height: 21px;
+    border: none;
+    background-image: url("../img/icons/icon-close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-feedback-bottom .button {
+    width: 460px;
+    height: 38px;
+    color: var(--basic-white);
+    border: none;
+}
+
+.current-category {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--basic-white-smoke);
+}
+
+.current-category h2{
+    color: var(--basic-midnight-blue);
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}    
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+    list-style: none;
+}
+  
+.breadcrumbs a,
+.breadcrumbs-current {
+    color: var(--basic-black);
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+ /* filter */
+
+.main-filter h3,
+.main-sort-container h3 {
+    color: var(--basic-black);
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: var(--basic-neutral-two);
+}
+
+.price-filter p {
+    color: var(--special-black);
+    font-family: PT Sans;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.min-price,
+.max-price {
+    color: var(--basic-black);
+    font-family: PT Sans;
+    font-size: 17px;
+    line-height: 18px;
+    background-color: var(--basic-neutral-two);
+    text-transform: uppercase;
+}
+
+.filter legend {
+    color: var(--basic-black);
+    font-family: "PT Sans";
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+.filter ul {
+    list-style: none;
+    color: var(--basic-black);
+    font-family: PT Sans;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+.filter-input-checkbox:hover,
+.filter-input-checkbox:focus,
+.filter-input-radio:hover,
+.filter-input-radio:focus {
+    color: var(--basic-dark-silver);
+  }
+
+.submit-button {
+    font-family: PT Sans;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    border: 1px solid #E5E5E5;
+  }
+
+.main-sort-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--basic-neutral-two);
+  }
+  
+.main-sort-container ul {
+    list-style: none;
+    color: var(--basic-black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sorting-attribute {
+    font-family: PT Sans;
+    font-size: 13px;
+    line-height: 18px;
+    opacity: 0.3;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--basic-red);
+}
+
+.sorting-attribute:hover {
+    border-bottom: 1px  solid var(--basic-red);
+    opacity: 1;
+}
+
+.sorting-attribute:active {
+    border-bottom: none;
+    color: var(--basic-red);
+    opacity: 1;
+    vertical-align: text-top;
+    align-items: ;
+}    
+
+
+
+/* Для секции СОРТИРОВКА добавить индикацию.
+
+Как поменять цвет треугольничкам сортировки? */
+
+/* Catalog */
+
 
