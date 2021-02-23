@@ -316,42 +316,23 @@ img {
     text-align: center;
 }
 
-.main__login-link a {
+.login-block__link  {
+    box-sizing: border-box;
     color: var(--basic-black);
+    background-color: var(--basic-white);
     font-size: 21px;
     line-height: 21px;
     text-align: center;
     width: 121px;
+    height: 36px;
+    padding: 6px;
 }
 
-.main__login-link {
-    background-color: var(--basic-white);
-}
-
-.register-link a {
-    color: var(--basic-black);
-    font-size: 21px;
-    line-height: 21px;
-    width: 150px;
-}
-
-.register-link {
-    background-color: var(--basic-white);
-}
-
-.main__login-link a:hover {
+.login-block__link:hover {
     color: var(--basic-red);
 }
 
-.main__login-link a:focus {
-    color: var(--basic-silver);
-}
-
-.register-link a:hover {
-    color: var(--basic-red);
-}
-
-.register-link a:focus {
+.login-block__link:focus {
     color: var(--basic-silver);
 }
 
