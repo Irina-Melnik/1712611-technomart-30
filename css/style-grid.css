@@ -326,7 +326,8 @@ img {
     width: 121px;
     height: 36px;
     padding: 6px;
-}
+    
+ }
 
 .login-block__link:hover {
     color: var(--basic-red);
