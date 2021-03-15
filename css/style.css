@@ -1067,6 +1067,7 @@ img {
     color: var(--basic-black);
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: -0.9px;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -1113,6 +1114,7 @@ img {
     color: var(--basic-midnight-blue);
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: -0.9px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -1217,6 +1219,7 @@ img {
 .index-columns h2 {
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: -0.9px;
     text-transform: uppercase;
     color: var(--basic-black);
     margin: 0;
@@ -1230,7 +1233,7 @@ img {
     line-height: 24px;
     color: var(--basic-black);
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .about-shipping p {
@@ -1390,8 +1393,10 @@ img {
 /* all-rights-reserved */
 
 .all-rights-reserved p {
+    display: block;
     font-size: 16px;
     line-height: 18px;
+    min-height: 37px;
     margin: 0;
     padding: 0px;
     padding-top: 36px;
@@ -1518,6 +1523,7 @@ img {
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    letter-spacing: 0.2px;
 }
 
 .breadcrumbs li {
@@ -2014,7 +2020,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 48px;
+    margin-top: 43px;
     margin-bottom: 59px;
 }
 
@@ -2025,11 +2031,17 @@ img {
     font-size: 13px;
     line-height: 18px;
     background-color: var(--basic-white);
-    padding: 10px 15px;
+    padding: 9px 14px;
     border: 1px solid #E5E5E5;
     border-radius: 2px;
     margin-right: 10px;
     margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pagination-item.next {
+    width: 140px;
 }
   
 .pagination-item a:hover {
@@ -2225,7 +2237,7 @@ img {
 /* Modal cart */
 
 .modal-cart {
-    display: none;
+    /* display: none; */
     top: 120px;
     bottom: auto;
     width: 620px;
