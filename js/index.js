@@ -11,6 +11,12 @@ const form = popupFBack.querySelector("form");
 const mail = popupFBack.querySelector("[name=e-mail]");
 const comment = popupFBack.querySelector("[name=comment]");
 
+const modalCartElem = document.querySelector(".modal-cart");
+const topElem = document.querySelector(".main-products-top");
+const btnBuyElem = document.querySelector(".button-buy");
+const cartCloseBtn = document.querySelector(".modal-cart .modal-close-button");
+const contShopBtn = document.querySelector(".continue-shopping")
+
 
 let isStorageSupport = true;
 let storage = "";
@@ -82,3 +88,17 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+topElem.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    console.log("Клик по кнопке «Купить» открывает модальное окно с сообщением о добавлении товара в корзину");
+    
+    if (evt.target.classList.contains('button-buy')) {
+        modalCartElem.classList.add("modal-show");
+    }
+
+    cartCloseBtn.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        modalCartElem.classList.remove("modal-show");
+    });
+
+});

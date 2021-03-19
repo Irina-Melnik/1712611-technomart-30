@@ -17,7 +17,6 @@ catalogElem.addEventListener("click", function(evt) {
         modalCartElem.classList.remove("modal-show");
     });
 
-
 });
 
 // catalogElem.addEventListener("click", function(evt) {

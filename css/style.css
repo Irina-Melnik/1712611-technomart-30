@@ -82,7 +82,7 @@
 /* Global */
 
 html {
-    font-family: "Cuprum", "PT Sans", sans-serif;
+    font-family: "Cuprum", "PT Sans", "Arial", sans-serif;
 }
 
 .page {
@@ -1179,11 +1179,11 @@ img {
     box-shadow: 0px 1px 0px #FFFFFF, inset 0px 1px 0px #FFFFFF;
 }
 
-.service-slider-list {
+.service-slider-item {
     position: relative;
 }
 
-.service-slider-list::before {
+.service-slider-item::before {
     content: "";
     position: absolute;
     width: 468px;
@@ -1483,6 +1483,7 @@ img {
     grid-template-columns: 220px 1fr;
     gap: 20px;
     align-content: start;
+    margin-bottom: 49px;
 }
   
 .page-catalog .page-title {
@@ -2024,7 +2025,6 @@ img {
     margin: 0;
     padding: 0;
     margin-top: 43px;
-    margin-bottom: 59px;
 }
 
 .pagination-item a {
@@ -2044,7 +2044,7 @@ img {
 }
 
 .pagination-item.next {
-    width: 140px;
+    width: 150px;
 }
   
 .pagination-item a:hover {
@@ -2086,6 +2086,7 @@ img {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    letter-spacing: -0.9px;
 }
 
 .about-perforator p {
