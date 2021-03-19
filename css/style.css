@@ -1276,6 +1276,7 @@ img {
     margin-top: 1px;
     margin-bottom: 12px;
 }
+
 .contacts-map .button {
     width: 300px;
     line-height: 38px;
@@ -1400,8 +1401,9 @@ img {
     margin: 0;
     padding: 0px;
     padding-top: 36px;
-    padding-left: 1px;
-    margin-right: 161px;
+    width: 227px;
+    /* padding-left: 1px; */
+    margin-right: 155px;
 }
 
 /* footer-social */
@@ -1427,8 +1429,9 @@ img {
     align-items: center;
     justify-content: center;
     width: 134px;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    padding: 1px;
     background-color: #212A3A;
     border-radius: 50%;
     color: inherit;
@@ -2127,6 +2130,12 @@ img {
     cursor: pointer;
 }
 
+
+
+/* .modal-close-button:active {
+    border: none;    
+} */
+
 /* modal-feedback */
 
 .modal-feedback {
@@ -2237,7 +2246,7 @@ img {
 /* Modal cart */
 
 .modal-cart {
-    /* display: none; */
+    display: none;
     top: 120px;
     bottom: auto;
     width: 620px;
@@ -2279,7 +2288,6 @@ img {
     background-color: var(--basic-neutral-smoke);
 }
 
-
 .modal-cart-bottom .modal-button {
     font-size: 14px;
     line-height: 18px;
@@ -2298,4 +2306,57 @@ img {
 
 .modal-cart-bottom .continue-shopping {
     background-color: var(--basic-white);
+}
+
+
+
+/* Animations */
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
