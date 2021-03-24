@@ -23,6 +23,10 @@ const sliderCtrlPrev = slider.querySelector('.slider-control-prev');
 const sliderCtrlNext = slider.querySelector('.slider-control-next');
 const sliderBottomCtrlPrev = slider.querySelector('.slider-controls>button:first-child');
 const sliderBottomCtrlNext = slider.querySelector('.slider-controls>button:nth-child(2)');
+const sliderItems = slider.querySelectorAll('.slider-item');
+
+const serviceSliderControls = document.querySelector('.service-slider-controls');
+const serviceSliderItems = document.querySelectorAll('.service-slider-item');
 
 let lastFocusedElement;
 
@@ -41,6 +45,7 @@ miniMapElem.addEventListener("click", function(evt) {
     evt.preventDefault();
     console.log("Клик по ссылке открывает модальное окно с полноразмерной интерактивной картой");
     modalMapElem.classList.add("modal-show");
+    modalMapElem.classList.add("modal-bounce");
 });
 
 mapCloseBtn.addEventListener("click", function(evt) {
@@ -116,6 +121,7 @@ topElem.addEventListener("click", function(evt) {
         console.log("Клик по кнопке «Купить» открывает модальное окно с сообщением о добавлении товара в корзину");
         lastFocusedElement = evt.target.parentElement.parentElement.parentElement;
         modalCartElem.classList.add("modal-show");
+        modalCartElem.classList.add("modal-bounce");
         modalMakeAnOrder.focus();
     }
 
@@ -133,8 +139,29 @@ sliderBottomCtrlNext.addEventListener('click', changeSlide);
 function changeSlide() {
     slider.classList.toggle('slider-wrapper-1');
     slider.classList.toggle('slider-wrapper-2');
+    sliderBottomCtrlPrev.classList.toggle('current');
+    sliderBottomCtrlNext.classList.toggle('current');
+    sliderItems.forEach(item => item.classList.toggle('slide-current'));
     clearInterval(slideChange);
     slideChange = setInterval(changeSlide, 4000);
+}
+
+serviceSliderControls.addEventListener('click', changeService);
+
+function changeService(e) {
+    const target = e.target;
+    const children = target.parentElement.children;
+    
+    // find changed button index
+    const indexOfSelectedService = Array.from(children).findIndex(el => el === target);
+    
+    // Change current class for buttons
+    Array.from(children).forEach(child => child.classList.remove('service-current'));
+    target.classList.add('service-current');
+
+    // Change current class for description    
+    Array.from(serviceSliderItems).forEach(child => child.classList.remove('service-slide-current'));
+    serviceSliderItems[indexOfSelectedService].classList.add('service-slide-current');    
 }
 
 

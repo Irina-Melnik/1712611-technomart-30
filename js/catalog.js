@@ -31,6 +31,7 @@ topElem.addEventListener("click", function(evt) {
         console.log("Клик по кнопке «Купить» открывает модальное окно с сообщением о добавлении товара в корзину");
         lastFocusedElement = evt.target.parentElement.parentElement.parentElement;
         modalCartElem.classList.add("modal-show");
+        modalCartElem.classList.add("modal-bounce");
         modalMakeAnOrder.focus();
     }
 

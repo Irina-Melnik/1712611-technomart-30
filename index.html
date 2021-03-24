@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/favicon/favicon.ico">
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
 </head>
@@ -93,12 +93,12 @@
           <div class="slider-wrapper slider-wrapper-1">
             <div class="slider">
               <ul class="slider-list">
-                <li class="slider-item slide slide-current">
+                <li class="slider-item slide-current">
                   <p class="slide-title">Перфораторы</p>
                   <p class="further-details">Настоящие мужские игрушки</p>
                   <a class="button slide-button" href="catalog.html">Открыть каталог</a>
                 </li>
-                <li class="slider-item slide">
+                <li class="slider-item">
                   <p class="slide-title">Дрели</p>
                   <p class="further-details">Соседям на радость!</p>
                   <a class="button slide-button" href="catalog.html">Открыть каталог</a>
@@ -126,8 +126,8 @@
         <li tabindex="0" class="product-card">
           <div class="product-card__bottom">
             <p class="product-card-title">Перфоратор BOSCH BFG 9000</p>
-            <s class="price-before-discount">32500 Р.</s>
-            <p class="price-after-discount">25500 Р.</p>
+            <s class="price-before-discount">32500&nbsp;Р.</s>
+            <p class="price-after-discount">25500&nbsp;Р.</p>
           </div>
           <div class="product-card__top">
             <p class="product-card__top__face1">
@@ -142,8 +142,8 @@
         <li tabindex="0" class="product-card promo-new">
           <div class="product-card__bottom">
             <p class="product-card-title">Перфоратор BOSCH BFG 3000</p>
-            <s class="price-before-discount">22500 Р.</s>
-            <p class="price-after-discount">15500 Р.</p>
+            <s class="price-before-discount">22500&nbsp;Р.</s>
+            <p class="price-after-discount">15500&nbsp;Р.</p>
           </div>
           <div class="product-card__top">
             <p class="product-card__top__face1">
@@ -158,8 +158,8 @@
         <li tabindex="0" class="product-card">
           <div class="product-card__bottom">
             <p class="product-card-title">Перфоратор BOSCH BFG 6000</p>
-            <s class="price-before-discount">30500 Р.</s>
-            <p class="price-after-discount">25500 Р.</p>
+            <s class="price-before-discount">30500&nbsp;Р.</s>
+            <p class="price-after-discount">25500&nbsp;Р.</p>
           </div>
           <div class="product-card__top">
             <p class="product-card__top__face1">
@@ -174,8 +174,8 @@
         <li tabindex="0" class="product-card promo-new">
           <div class="product-card__bottom">
             <p class="product-card-title">Перфоратор BOSCH BFG 2000</p>
-            <s class="price-before-discount">22500 P.</s>
-            <p class="price-after-discount">12500 Р.</p>
+            <s class="price-before-discount">22500&nbsp;P.</s>
+            <p class="price-after-discount">12500&nbsp;Р.</p>
           </div>
           <div class="product-card__top">
             <p class="product-card__top__face1">
@@ -238,53 +238,50 @@
       </ul>
     </section>
     <div class="main-service-wrepper">
-      
-        <section class="main-service-list center" id="delivery">
-          <div class="service-description">
-            <h2>Сервисы</h2>
-            <p>Хороший интернет-магазин отличается от плохого не только ценами!
-              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+      <section class="main-service-list center" id="delivery">
+        <div class="service-description">
+          <h2>Сервисы</h2>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        </div>
+        <div class="service-slider">
+          <ul class="service-slider-list">
+            <li class="service-slider-item service-slide-current">
+              <h3 class="service-slide-title">
+                Доставка
+              </h3>
+              <p>Мы с удовольствием доставим ваш товар прямо
+                к&nbsp;вашему подъезду совершенно бесплатно!
+                Ведь&nbsp;мы&nbsp;неплохо&nbsp;заработаем,
+                поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!</p>
+            </li>
+            <li class="service-slider-item ">
+              <h3 class="service-slide-title">
+                Гарантия
+              </h3>
+              <p>Мы с удовольствием доставим ваш товар прямо
+                к&nbsp;вашему подъезду совершенно бесплатно!
+                Ведь&nbsp;мы&nbsp;неплохо&nbsp;заработаем,
+                поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!</p>
+            </li>
+            <li class="service-slider-item">
+              <h3 class="service-slide-title">
+                Кредит
+              </h3>
+              <p>Мы с удовольствием доставим ваш товар прямо
+                к&nbsp;вашему подъезду совершенно бесплатно!
+                Ведь&nbsp;мы&nbsp;неплохо&nbsp;заработаем,
+                поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!</p>
+            </li>
+          </ul>
+          <div class="service-slider-controls">
+            <button class="service-current" type="button">Доставка</button>
+            <button type="button">Гарантия</button>
+            <button type="button">Кредит</button>
           </div>
-          <div class="service-slider">
-            <ul class="service-slider-list">
-              <li class="service-slider-item service-slide service-slide-current">
-                <h3 class="service-slide-title">
-                  Доставка
-                </h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш этаж!</p>
-              </li>
-              <li class="service-slider-item service-slide">
-                <h3 class="service-slide-title">
-                  Гарантия
-                </h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш этаж!</p>
-              </li>
-              <li class="service-slider-item service-slide">
-                <h3 class="service-slide-title">
-                  Кредит
-                </h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш этаж!</p>
-              </li>
-            </ul>
-            <div class="service-slider-controls">
-              <button class="service-current" type="button">Доставка</button>
-              <button type="button">Гарантия</button>
-              <button type="button">Кредит</button>
-            </div>
-          </div>
-        </section>
-      
+        </div>
+      </section>
     </div>
-    
     <div class="index-columns center">
       <section class="about-company" id="about-company">
         <h2>Компания <q>Техномарт</q></h2>
@@ -386,9 +383,7 @@
         </ul>
         <div class="footer-feedback">
           <p>Обратная связь:</p>
-          <address class="footer-feedback-mail">
-            <a class="footer-feedback-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </address>
+          <a class="footer-feedback-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="footer-copyright">
           <p>Разработано -</p>
@@ -442,9 +437,7 @@
   </section>
   <section class="modal modal-cart">
     <h2 class="visually-hidden">Модальное окно с сообщением о добавлении в корзину</h2>
-    <div class="modal-cart-top">
-      <p>Товар добавлен в корзину!</p>
-    </div>
+    <p class="modal-cart-top">Товар добавлен в корзину!</p>
     <div class="modal-cart-bottom">
       <button class="modal-button make-an-order" type="button">Оформить заказ</button>
       <button class="modal-button continue-shopping" type="button">Продолжить покупки</button>
@@ -457,7 +450,7 @@
       </button>
     </div>
   </section>
-  <script src="js/index.js"></script>
+  <script src="js/index.min.js"></script>
 </body>
 
 </html>
